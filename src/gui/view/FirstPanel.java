@@ -4,6 +4,7 @@ import javax.swing.*;
 import gui.controller.GUIController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
 
 public class FirstPanel extends JPanel
 {
@@ -58,6 +59,8 @@ public class FirstPanel extends JPanel
 		int red = (int) (Math.random() * 256);
 		int green = (int) (Math.random() * 256);
 		int blue = (int) (Math.random() * 256);
+		
+		this.setBackground(new Color(red, green, blue));
 	}
 	
 }
