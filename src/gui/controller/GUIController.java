@@ -1,13 +1,16 @@
 package gui.controller;
 import gui.model.Duck;
+import gui.view.FirstFrame;
 
 public class GUIController
 {
 	private Duck myDuck;
+	private FirstFrame appFrame;
 	
-	GUIController()
+	public GUIController()
 	{
 		myDuck= new Duck();
+		appFrame = new FirstFrame();
 	}
 	
 	public void start()
