@@ -2,6 +2,8 @@ package gui.view;
 
 import javax.swing.*;
 import gui.controller.GUIController;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class FirstPanel extends JPanel
 {
@@ -42,7 +44,20 @@ public class FirstPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		
+		myButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent mouseClick)
+			{
+				changeColor();
+			}
+		});
+	}
+	
+	private void changeColor()
+	{
+		int red = (int) (Math.random() * 256);
+		int green = (int) (Math.random() * 256);
+		int blue = (int) (Math.random() * 256);
 	}
 	
 }
