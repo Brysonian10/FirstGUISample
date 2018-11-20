@@ -1,13 +1,18 @@
 package gui.view;
 
 import javax.swing.JFrame;
+import gui.controller.GUIController;
 
 public class FirstFrame extends JFrame
 {
-	public FirstFrame()
+	private FirstPanel appPanel;
+	private GUIController appController;
+	
+	public FirstFrame(GUIController appController)
 	{
 		super();
-		
+		this.appController = appController;
+		this.appPanel = new FirstPanel(appController);
 		setupFrame();
 	}
 	
